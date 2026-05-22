@@ -1,0 +1,76 @@
+name: Resource or Funding Request
+description: Use this form to submit a resource or funding request to the EC or SSC for consideration. The EC will review and bring eligible requests to the board.
+title: "[Resource Request]: "
+labels: ["resource-request"]
+assignees: ["executive-council", "software-steering-council"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Before you submit:** The more context you provide, the easier it is for the EC or SSC to evaluate your request. 
+        Questions? Reach out before submitting.
+
+  - type: input
+    id: requestor-name
+    attributes:
+      label: Your name
+      placeholder: Jane Smith
+    validations:
+      required: true
+
+  - type: input
+    id: requestor-role
+    attributes:
+      label: Your role or affiliation
+      description: e.g. committee member, working group lead, general member
+      placeholder: Working Group Lead
+    validations:
+      required: true
+
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Request type
+      options:
+        - Funding
+        - Resources (non-financial)
+        - Both
+    validations:
+      required: true
+
+  - type: textarea
+    id: request-summary
+    attributes:
+      label: What are you requesting and why?
+      description: Describe what you need, the amount or resources involved, and why it matters to the community.
+      placeholder: e.g. $1,500 for venue deposit for a community event on March 15. This is time-sensitive and cannot wait for the next budget cycle because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: community-impact
+    attributes:
+      label: Community impact
+      description: Who benefits and how? What happens if this request isn't approved?
+      placeholder: Describe the expected outcome and who it serves.
+    validations:
+      required: true
+
+  - type: input
+    id: timeline
+    attributes:
+      label: Timeline or deadline
+      placeholder: e.g. Funds needed by March 15
+    validations:
+      required: true
+
+  - type: textarea
+    id: supporting-materials
+    attributes:
+      label: Supporting materials or prior conversations
+      description: Links to relevant docs, meeting notes, prior EC discussions, or vendor quotes (optional but helpful).
+      placeholder: e.g. Links to meeting notes, prior EC conversations, vendor quotes, etc.
+    validations:
+      required: false
+
+ 
